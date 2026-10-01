@@ -1,0 +1,248 @@
+\section{\textbf{Knowledge Fusion as a Pathway to Knowledge Invention}}
+\label{sec:knowledge_fusion}
+
+Knowledge is distributed across disciplines, institutions, datasets,
+terminologies, and historical periods. Two scientific communities may study
+related structures without sharing concepts, cite separate literatures while
+describing interacting mechanisms, or possess results that become
+consequential only when interpreted together. This fragmentation creates a
+space in which the components of a new insight may already be publicly
+available even though the insight itself is absent from collective knowledge.
+Knowledge fusion is the process by which an intelligent system identifies and
+constructs such a missing relation.
+
+The possibility of deriving new hypotheses from disconnected literatures has
+a substantial history. Swanson described \emph{undiscovered public knowledge}
+through the example of separately published biomedical findings whose latent
+connection suggested a previously unrecognized hypothesis
+\cite{swanson1986fish}. Later work on literature-based discovery generalized
+this idea into computational methods for identifying implicit relations across
+scientific corpora. Studies of scientific innovation likewise show that
+atypical combinations of prior work are associated with unusually high impact
+\cite{uzzi2013atypical}, while research that bridges distant regions of a
+knowledge network is riskier but can yield greater rewards
+\cite{foster2015tradition}. These findings motivate knowledge fusion, but the
+definition developed here imposes requirements beyond bibliographic novelty.
+
+\subsection{\textbf{From Combination to Fusion}}
+
+Let $\mathcal{K}_{1},\ldots,\mathcal{K}_{n}$ denote bodies of justified
+knowledge associated with distinct domains, communities, or representational
+systems. Their aggregation is the union
+
+\begin{equation}
+\begin{aligned}
+\mathcal{K}_{\cup}
+&=\bigcup_{i=1}^{n}\mathcal{K}_{i}.
+\end{aligned}
+\label{eq:knowledge_union}
+\end{equation}
+
+Aggregation increases availability but does not create a new epistemic
+relation. A search engine, database, or language model may retrieve elements
+from several domains and place them in one response without changing what is
+known. Knowledge fusion requires an additional contribution $\kappa_F$ that is
+not explicitly contained in any source domain or in their simple union:
+
+\begin{equation}
+\begin{aligned}
+\mathcal{F}_{x}
+(\mathcal{K}_{1},\ldots,\mathcal{K}_{n})
+&\longrightarrow \kappa_F,\\
+\kappa_F
+&\notin \mathcal{K}_{i}
+\quad \forall i,\\
+\kappa_F
+&\notin \mathcal{K}_{\cup}.
+\end{aligned}
+\label{eq:fusion_novel_relation}
+\end{equation}
+
+Here, $\mathcal{F}_{x}$ is the fusion process realized by machine $x$, and
+$\kappa_F$ is a candidate relation, explanation, hypothesis, or conceptual
+structure. The final condition means that $\kappa_F$ cannot be recovered as an
+explicit claim already present in the aggregated sources. Its components may
+be present, but their consequential connection is not.
+
+This distinction separates five increasingly demanding operations. Retrieval
+locates an existing item. Aggregation places items together. Synthesis organizes
+existing claims into a coherent account. Recombination rearranges known
+elements into a configuration that may be novel in form. Fusion constructs a
+relation that changes what can be explained, predicted, tested, or created.
+Only the last operation is a candidate pathway to knowledge invention.
+
+\subsection{\textbf{Latent Relations Across Knowledge Domains}}
+
+A latent relation exists when justified claims in separated knowledge domains
+jointly support an implication not represented within any participating
+domain. The simplest structure is the open-discovery pattern
+
+\begin{equation}
+\begin{aligned}
+A &\longrightarrow B,\\
+B &\longrightarrow C,\\
+A &\overset{?}{\longrightarrow} C,
+\end{aligned}
+\label{eq:abc_fusion}
+\end{equation}
+
+where the solid relations are established and the dashed relation is an
+unrecognized candidate inferred through the shared intermediary $B$. This
+structure captures the foundation of classical literature-based discovery
+\cite{swanson1986fish}, but knowledge fusion need not be limited to a
+three-node chain. It may connect causal graphs, mathematical structures,
+experimental anomalies, measurement techniques, or explanatory models across
+many domains.
+
+The importance of a fusion does not follow from distance alone. Two remote
+concepts may be unrelated, and two adjacent concepts may support a profound
+inference. Empirical studies of scientific production indicate that successful
+high-impact work often balances conventional foundations with atypical
+combinations \cite{uzzi2013atypical}. A fusion system must therefore preserve
+enough established structure to support inference while exploring relations
+that prevailing disciplinary organization makes unlikely to be examined.
+
+Let $d(\mathcal{K}_{i},\mathcal{K}_{j})$ measure conceptual or bibliographic
+distance, and let $J(\kappa_F)$ represent the justification available for a
+candidate fusion. Then neither novelty nor distance alone is sufficient:
+
+\begin{equation}
+\begin{aligned}
+d(\mathcal{K}_{i},\mathcal{K}_{j})\gg 0
+&\not\Rightarrow J(\kappa_F)>0,\\
+J(\kappa_F)>0
+&\not\Rightarrow
+\operatorname{Consequential}(\kappa_F)=1.
+\end{aligned}
+\label{eq:distance_not_fusion}
+\end{equation}
+
+The first relation rejects arbitrary cross-domain analogy. The second rejects
+valid but trivial connections. Knowledge fusion requires both defensible
+support and consequential epistemic change.
+
+\subsection{\textbf{Fusion as the Exposure of an Unknown Unknown}}
+
+Knowledge fusion becomes relevant to superintelligence when it reveals not
+only a new answer but a previously unrecognized object of inquiry. Suppose
+$\mathcal{K}_{a}$ and $\mathcal{K}_{b}$ contain individually coherent models,
+yet their joint implications produce a contradiction, unexplained regularity,
+or missing causal variable. A machine may use that tension to formulate a new
+question $q_F$:
+
+\begin{equation}
+\begin{aligned}
+\mathcal{F}_{x}(\mathcal{K}_{a},\mathcal{K}_{b})
+&\longrightarrow q_F,\\
+q_F
+&\notin \mathcal{Q}_{H,t},\\
+\operatorname{Ground}(q_F,
+\mathcal{K}_{a}\cup\mathcal{K}_{b})
+&=1.
+\end{aligned}
+\label{eq:fusion_unknown_unknown}
+\end{equation}
+
+The question is an unknown unknown before fusion because humanity has not
+represented it within the recognized research agenda. Fusion changes that
+state. It exposes the question, provides its initial justification, and creates
+a target for discovery or theory construction. Computational work that
+identifies previously unspecified state variables from observations provides a
+partial example of machines constructing new representational candidates
+\cite{chen2022variables}. The stronger fusion criterion additionally requires
+that the machine recognize the cross-domain significance of the constructed
+object.
+
+Scientific search is shaped by human incentives and by the organization of
+existing knowledge. Network analyses show that researchers preferentially
+pursue established relationships even when riskier, more innovative searches
+have greater potential value \cite{foster2015tradition}. Computational systems
+can search differently. Models of collective discovery suggest that strategic
+selection of experiments can accelerate the exploration of a scientific
+knowledge network \cite{rzhetsky2015experiments}. A fusion-oriented machine
+could extend this principle by selecting not only experiments but also distant
+knowledge regions whose joint structure merits investigation.
+
+\subsection{\textbf{Fusion-Driven Knowledge Invention}}
+
+A candidate fusion becomes knowledge invention only after it is developed into
+a consequential epistemic contribution and validated. Let
+$\operatorname{FKI}_{x}(\kappa_F)$ denote fusion-driven knowledge invention by
+machine $x$. Then
+
+\begin{equation}
+\begin{aligned}
+\operatorname{FKI}_{x}(\kappa_F)
+\Longleftrightarrow{}&
+\operatorname{Fuse}_{x}
+(\mathcal{K}_{1},\ldots,\mathcal{K}_{n})\\
+&\land \kappa_F\notin\mathcal{K}_{H,t}\\
+&\land
+\operatorname{Originate}_{x}(\kappa_F\mid W)\\
+&\land \operatorname{Consequential}(\kappa_F)\\
+&\land \operatorname{Validate}(\kappa_F)=1.
+\end{aligned}
+\label{eq:fusion_knowledge_invention}
+\end{equation}
+
+Equation~\eqref{eq:fusion_knowledge_invention} excludes a system that merely
+retrieves a previously published interdisciplinary connection. It also excludes
+a system that proposes a novel connection without evidence, repeats a human
+specified synthesis, or generates an interesting analogy with no explanatory
+or predictive consequence. The machine must originate the essential relation
+and that relation must survive independent, domain-appropriate evaluation.
+
+Validation depends on the type of fused contribution. A causal hypothesis may
+require controlled intervention; a mathematical bridge may require proof; a
+unified explanatory model may require superior prediction across the source
+domains; and a proposed technological principle may require successful
+realization. AI-enabled science already distributes hypothesis generation,
+modelling, experimental planning, and analysis across interacting systems
+\cite{wang2023scientific}. Fusion-driven knowledge invention adds the
+requirement that the cross-domain relation itself originate from the machine
+rather than be specified by the human workflow.
+
+\subsection{\textbf{Failure Modes and Evidentiary Safeguards}}
+
+Knowledge fusion is especially vulnerable to outputs that appear profound
+because they connect distant concepts. At least six failure modes must be
+distinguished from genuine fusion. First, \emph{lexical overlap} mistakes shared
+terminology for shared mechanism. Second, \emph{analogy inflation} treats a
+structural resemblance as evidence of causal identity. Third,
+\emph{correlation substitution} presents statistical association as
+explanation. Fourth, \emph{ontology mismatch} combines concepts whose meanings
+or measurement assumptions are incompatible. Fifth, \emph{hidden retrieval}
+reproduces a connection present in the training corpus or literature while
+presenting it as machine-originated. Sixth, \emph{novelty without consequence}
+generates a defensible but scientifically unimportant relation.
+
+For a candidate $\kappa_F$, a minimum evidentiary record should therefore
+contain
+
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(\kappa_F)=
+\{&\operatorname{Sources},
+\operatorname{Provenance},
+\operatorname{Derivation},\\
+&\operatorname{NoveltySearch},
+\operatorname{Predictions},
+\operatorname{Validation}\}.
+\end{aligned}
+\label{eq:fusion_record}
+\end{equation}
+
+Source and provenance records identify the knowledge used. Derivation records
+show how the new relation follows from or transforms those inputs. Novelty
+search tests whether the relation already exists in human knowledge.
+Predictions state what should be observed if the fusion is correct. Validation
+records preserve the independent evidence used to accept, reject, or revise the
+claim. This record does not eliminate epistemic uncertainty, but it makes the
+attribution of machine-originated fusion auditable.
+
+Knowledge fusion thus reveals what separated bodies of knowledge imply when
+connected. It can expose an unknown unknown and provide the conceptual
+structure from which knowledge invention develops. Knowledge discovery, the
+subject of the next section, addresses a different pathway: identifying a
+phenomenon, mechanism, entity, or regularity that existing knowledge does not
+yet adequately represent, even after its known components have been connected.

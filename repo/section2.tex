@@ -1,0 +1,292 @@
+\section{\textbf{From General Intelligence to Superintelligence}}
+\label{sec:agi_to_si}
+
+Section~\ref{sec:introduction} proposed that superintelligence begins when a
+generally intelligent machine originates validated knowledge beyond the
+collective human frontier. This section develops that distinction more
+precisely. The transition from AGI to superintelligence is not defined by a
+larger model, a longer context window, access to more tools, or improved
+performance within an existing task. It is defined by a change in the machine's
+epistemic role: from a system that operates across established knowledge and
+human-specified problems to a system that can expose, formulate, and resolve
+problems that humanity had not recognized.
+
+\subsection{\textbf{The Functional Boundary of General Intelligence}}
+
+General intelligence concerns the organization of agency. An AGI must transfer
+knowledge across domains, recompose existing capabilities for unfamiliar
+problems, maintain goals over time, revise plans after failure, and coordinate
+perception, memory, reasoning, metacognition, and action
+\cite{zohourian2026agi}. Formal definitions of intelligence likewise emphasize
+the capacity to achieve goals across a wide range of environments
+\cite{legg2007universal}, while broader AGI accounts distinguish general
+adaptability from competence on isolated tasks \cite{goertzel2014agi}.
+
+Let $\mathcal{E}$ denote environments, $\mathcal{T}$ tasks, and $\mathcal{M}$
+modalities. For agent $x$, let $T_x$, $R_x$, and $A_x$ denote transfer,
+recomposition, and adaptation. The functional scope of general agency can be
+represented as
+
+\begin{equation}
+\begin{aligned}
+\mathcal{G}(x)
+&= \Phi_x(T_x,R_x,A_x),\\
+\Phi_x:
+\mathcal{E}\times\mathcal{T}\times\mathcal{M}
+&\longrightarrow
+\text{coherent goal-directed behavior},
+\end{aligned}
+\label{eq:general_agency}
+\end{equation}
+
+where $\Phi_x$ denotes the persistent organization through which these
+capacities inform and constrain one another. No single component is sufficient.
+Transfer without adaptation may fail when prior assumptions break;
+recomposition without coherent goals may produce locally useful but globally
+inconsistent actions; and broad task exposure may reflect memorized coverage
+rather than general agency.
+
+Generality also cannot be inferred from the mere presence of many components.
+A framework may contain language, vision, memory, search, code execution, and
+robotic interfaces while relying on a human to select tools, reconcile their
+outputs, detect failure, and preserve the objective. Framework capacity,
+realized agency, and observed performance must therefore remain distinct:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{Cap}(F)
+&\not\equiv \operatorname{Realize}(x,F),\\
+\operatorname{Realize}(x,F)
+&\not\equiv \operatorname{Perf}(x,\tau),
+\end{aligned}
+\label{eq:capacity_realization}
+\end{equation}
+
+where $F$ is a computational framework and $\tau$ is an evaluated task. An AGI
+realizes coordinated general agency; it need not be omniscient, infallible, or
+superior on every task. Its defining property is the ability to reorganize its
+available capacities in pursuit of objectives across sufficiently varied and
+unfamiliar conditions.
+
+\subsection{\textbf{The Epistemic Boundary of General Intelligence}}
+
+Nothing in the preceding definition requires AGI to create knowledge beyond
+humanity. A generally intelligent machine could possess extensive human
+knowledge, apply it across disciplines, generate plans, conduct analyses, and
+solve previously unsolved but already formulated problems. Such a system could
+be transformative while remaining epistemically bounded by the concepts,
+questions, and objectives inherited from human inquiry.
+Reviews of AI-enabled scientific discovery already distinguish multiple roles
+for machines across hypothesis generation, modelling, experimental design, and
+analysis \cite{wang2023scientific}. That breadth of participation motivates a
+more precise question of attribution: whether the machine merely operates
+within the human research agenda or originates an epistemic object beyond it.
+
+Let $\mathcal{K}_{H,t}$ be collective justified human knowledge at time $t$,
+and let $\mathcal{Q}_{H,t}$ be the set of questions, hypotheses, and research
+targets recognized by humans. An AGI operating within the human epistemic
+boundary may be represented by
+
+\begin{equation}
+\begin{aligned}
+x:
+(\mathcal{K}_{H,t},\mathcal{Q}_{H,t},\mathcal{O}_{t})
+&\longrightarrow
+(\mathcal{Y}_{t},\mathcal{A}_{t}),\\
+\mathcal{Q}_{x,t}
+&\subseteq \mathcal{Q}_{H,t},
+\end{aligned}
+\label{eq:agi_epistemic_boundary}
+\end{equation}
+
+where $\mathcal{O}_{t}$ denotes available observations,
+$\mathcal{Y}_{t}$ generated conclusions or predictions, and
+$\mathcal{A}_{t}$ actions. The subset relation expresses the limiting case in
+which the machine's research agenda remains contained within questions humans
+have already recognized. The machine may produce an answer absent from
+$\mathcal{K}_{H,t}$ and thereby resolve a known unknown, but it does not yet
+originate the object of inquiry itself.
+
+This distinction is visible in current AI-assisted science. Machine learning
+has helped recover symbolic laws from experimental data
+\cite{schmidt2009laws,udrescu2020aifeynman}, guided
+mathematicians toward conjectures and theorems \cite{davies2021mathematics},
+predicted protein structures \cite{jumper2021alphafold}, and proposed large
+numbers of candidate stable materials \cite{merchant2023materials}. Language
+models connected to tools and laboratory automation can design, plan, and
+execute chemistry experiments \cite{boiko2023autonomous}, while autonomous
+laboratories can perform closed-loop materials synthesis
+\cite{szymanski2023autonomous}. Earlier robot-scientist systems likewise
+generated and experimentally tested functional-genomics hypotheses
+\cite{king2004robot} and demonstrated end-to-end automation of iterative
+scientific investigation \cite{king2009automation}. These are consequential advances at the
+scientific frontier. They also begin from domains, objectives, datasets,
+experimental systems, and validation conditions established by human
+researchers. Their results demonstrate increasingly powerful scientific
+instruments and agents, not by themselves the invention of an unknown unknown.
+
+\subsection{\textbf{Autonomous Problem Formation}}
+
+The first additional requirement for superintelligence is autonomous problem
+formation. The machine must be capable not only of answering a question but of
+identifying that a consequential question exists. This may occur when the
+system detects an unexplained regularity, recognizes a contradiction across
+disciplines, constructs a new conceptual variable, identifies an assumption
+shared by existing theories, or notices that available observations support a
+previously unrepresented phenomenon. Work on automated identification of
+latent state variables from high-dimensional observations illustrates progress
+toward machines constructing representations that were not specified directly
+by researchers \cite{chen2022variables}. Such representation discovery is an
+important precursor, although it does not alone establish autonomous problem
+formation in the stronger sense proposed here.
+
+Let $q_{x}$ be a machine-originated research question. Autonomous problem
+formation requires
+
+\begin{equation}
+\begin{aligned}
+q_x \notin \mathcal{Q}_{H,t},
+\qquad
+q_x \notin \mathcal{K}_{H,t},\\
+\operatorname{Ground}(q_x,\mathcal{K}_{H,t},\mathcal{O}_{t})=1,
+\qquad
+\operatorname{Consequential}(q_x)=1.
+\end{aligned}
+\label{eq:problem_formation}
+\end{equation}
+
+The grounding condition prevents arbitrary question generation from being
+mistaken for intelligence. A language model can generate indefinitely many
+unusual questions through stochastic variation. Most will be trivial,
+ill-posed, physically impossible, semantically incoherent, or disconnected
+from evidence. A superintelligent problem formulation must arise from a
+defensible relation among observations, established knowledge, unresolved
+tensions, or formally represented possibilities. The consequentiality
+condition further requires that resolving the question would materially alter
+understanding, explanation, prediction, or technological capability.
+
+Autonomous problem formation is therefore more demanding than novelty. It
+requires epistemic judgment: the system must distinguish an unasked question
+that matters from an unasked question that is merely possible. This capacity
+is the point at which an unknown unknown becomes an identified object of
+inquiry.
+
+\subsection{\textbf{Causal Origination of Knowledge}}
+
+Scientific results are commonly produced by distributed systems containing
+researchers, datasets, instruments, software, models, and institutions.
+Requiring a superintelligent machine to work without human participation would
+therefore impose a standard not applied to human scientists. Nevertheless,
+attribution cannot be granted merely because AI appears somewhere in the
+workflow. The machine must make the causally essential epistemic contribution.
+
+Let $W$ be a scientific workflow and let $\kappa$ be its resulting knowledge
+claim. We define machine origination counterfactually:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{Originate}_{x}(\kappa\mid W)=1
+\Longleftrightarrow{}&
+\operatorname{Produce}(W,\kappa)=1\\
+&\land
+\operatorname{Produce}(W\setminus x,\kappa)=0\\
+&\land
+\operatorname{Specified}_{H}(\kappa)=0.
+\end{aligned}
+\label{eq:causal_origination}
+\end{equation}
+
+The first condition requires that the workflow produce the contribution. The
+second requires that removing the machine's relevant epistemic operation would
+prevent that contribution from being produced through the same workflow. The
+third excludes cases in which humans fully specified the conclusion and used
+the machine only to calculate, retrieve, format, or experimentally execute it.
+This is a conceptual causal test rather than a demand for literal repetition of
+every discovery process.
+
+Machine origination can occur through knowledge fusion or knowledge discovery.
+In fusion, the essential contribution may be recognizing that previously
+separated theories, data, or disciplines instantiate a common structure. In
+discovery, it may be detecting a new entity, mechanism, regularity, or law.
+Neither pathway is sufficient until its output is converted into an epistemic
+object that can be understood, assessed, and incorporated into knowledge.
+Prior systems for symbolic-law recovery and automated hypothesis testing
+demonstrate that portions of this cycle can be computationally realized
+\cite{schmidt2009laws,king2004robot}; the unresolved issue is whether the
+machine can originate the consequential object of inquiry rather than search
+within a human-defined hypothesis space.
+
+\subsection{\textbf{The Transition Criterion}}
+
+The transition from AGI to superintelligence requires a complete epistemic
+cycle. The machine must form or expose the previously unrecognized problem,
+originate a candidate explanation or solution, connect that contribution to
+existing knowledge, and enable domain-appropriate validation. Let
+$\kappa_x$ denote the resulting machine-originated contribution. Then
+
+\begin{equation}
+\begin{aligned}
+\operatorname{KI}_{x}(\kappa_x)
+\Longleftrightarrow{}&
+\operatorname{FormProblem}_{x}(q_x)\\
+&\land \operatorname{Originate}_{x}(\kappa_x\mid W)\\
+&\land \operatorname{Explain}_{x}
+(\kappa_x,\mathcal{K}_{H,t})\\
+&\land \operatorname{Validate}(\kappa_x)=1\\
+&\land \operatorname{Consequential}(\kappa_x)=1.
+\end{aligned}
+\label{eq:knowledge_invention_cycle}
+\end{equation}
+
+Knowledge invention is not established at the moment a machine produces a
+novel output. Before validation, the output is a candidate hypothesis, theory,
+method, or invention. Validation may require controlled experiment, formal
+proof, reproducible computation, engineering realization, convergent evidence,
+or another procedure accepted by the relevant discipline. Independent human or
+machine verification may participate in this process, but the validation
+standard must not be defined solely by the originating system. This insistence
+on domain-appropriate validation follows the broader AI-for-science literature,
+in which prediction, hypothesis generation, experimentation, and analysis form
+an interdependent discovery process rather than interchangeable evidence of
+knowledge \cite{wang2023scientific}.
+
+The relationship between AGI and superintelligence can consequently be stated
+as
+
+\begin{equation}
+\begin{aligned}
+\operatorname{SI}(x)
+\Longleftrightarrow{}&
+\operatorname{AGI}(x)\\
+&\land \exists q_x,\kappa_x:
+q_x\notin\mathcal{Q}_{H,t}\\
+&\land \operatorname{KI}_{x}(\kappa_x)\\
+&\land
+\mathcal{K}_{H,t+1}
+=\mathcal{K}_{H,t}\cup\{\kappa_x\}.
+\end{aligned}
+\label{eq:si_transition}
+\end{equation}
+
+Equation~\eqref{eq:si_transition} preserves the established meaning of
+superintelligence as capability beyond humans \cite{bostrom2014superintelligence}
+while replacing an unspecified performance comparison with an epistemic
+criterion. The machine goes beyond humans not merely by doing a known task
+better, but by making a validated addition to collective knowledge whose object
+of inquiry humanity had not recognized.
+
+This criterion also clarifies why the present framework does not define a
+separate category of domain superintelligence. A specialized scientific model
+may be indispensable to a discovery, but specialization does not establish
+general intelligence. Under the terminology developed here,
+superintelligence is a mode of general intelligence. Specialized systems are
+scientific instruments or components of a discovery system unless they also
+realize the general agency and machine-originated knowledge invention required
+by Equation~\eqref{eq:si_transition}.
+
+Knowledge fusion and knowledge discovery now require separate analysis because
+they describe the principal routes by which a machine may cross the human
+epistemic boundary. The following sections examine how each route can produce
+knowledge invention, how their outputs differ from retrieval and recombination,
+and what evidence would justify attributing the resulting knowledge to the
+machine.

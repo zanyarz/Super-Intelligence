@@ -1,0 +1,298 @@
+\section{\textbf{Knowledge Invention: The Defining Capability of Superintelligence}}
+\label{sec:knowledge_invention}
+
+Sections~\ref{sec:knowledge_fusion} and~\ref{sec:knowledge_discovery}
+identified two pathways beyond existing knowledge. Fusion constructs a
+consequential relation among previously separated bodies of knowledge.
+Discovery establishes a previously unknown phenomenon, entity, mechanism,
+variable, regularity, law, or formal object. Neither pathway alone fully
+specifies the transition to superintelligence. A fused relation may remain an
+untested hypothesis, and a discovered phenomenon may remain unexplained.
+Knowledge invention occurs when a generally intelligent machine originates the
+epistemic structure through which such a result becomes consequential,
+validated, and incorporable into collective knowledge.
+
+The term \emph{invention} is used deliberately. Natural phenomena are not
+invented by the system, but theories, explanatory structures, representations,
+methods, algorithms, architectures, and research programs are constructed.
+Machine knowledge invention may therefore begin with discovery, fusion, or
+their interaction, but it culminates in a new epistemic object that did not
+previously exist within either collective human knowledge or the recognized
+human research agenda.
+
+\subsection{\textbf{Novelty, Usefulness, and Epistemic Validity}}
+
+Research on creativity commonly treats originality and effectiveness as joint
+requirements \cite{runco2012creativity}. Work on artificial creativity likewise
+distinguishes novel combination, exploration within a conceptual space, and
+transformation of that space \cite{boden1998creativity}. These distinctions are
+relevant to knowledge invention but remain insufficient for scientific
+attribution. An idea may be original and useful without being true, and a true
+statement may be trivial, previously known, or accidentally generated.
+
+Let $\kappa$ be a candidate epistemic contribution. Knowledge invention
+requires at least four properties:
+
+\begin{equation}
+\begin{aligned}
+N(\kappa)&=1,\\
+C(\kappa)&=1,\\
+V(\kappa)&=1,\\
+O_x(\kappa)&=1,
+\end{aligned}
+\label{eq:invention_properties}
+\end{equation}
+
+where $N$ denotes novelty relative to collective human knowledge, $C$
+consequentiality, $V$ domain-appropriate validation, and $O_x$ causal
+origination by machine $x$. The conjunction is essential. Novelty without
+consequence is arbitrary variation; consequence without validity is an
+attractive error; validity without novelty is rediscovery; and novelty,
+consequence, and validity without machine origination describe a human
+invention assisted by a machine rather than machine knowledge invention.
+
+The standard is therefore stronger than computational creativity. A system may
+generate a novel analogy, design, proof sketch, molecule, or theory candidate
+and still fail to invent knowledge. The output becomes knowledge only after its
+claims survive evaluation independent of the originating process.
+
+\subsection{\textbf{Discovery, Fusion, and Invention}}
+
+Fusion and discovery are neither mutually exclusive nor guaranteed to produce
+invention. Fusion may expose a contradiction that becomes a new research
+question. Discovery may identify the missing entity needed to reconcile two
+theories. A discovered mechanism may then enable further fusion across domains.
+The interaction is recurrent:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{Fusion}_{x}
+&\longrightarrow q_F
+\longrightarrow \operatorname{Discovery}_{x},\\
+\operatorname{Discovery}_{x}
+&\longrightarrow \kappa_D
+\longrightarrow \operatorname{Fusion}_{x},\\
+\operatorname{Fusion}_{x}oplus
+\operatorname{Discovery}_{x}
+&\longrightarrow \kappa_I,
+\end{aligned}
+\label{eq:fusion_discovery_invention}
+\end{equation}
+
+where $q_F$ is a question exposed through fusion, $\kappa_D$ is a discovered
+object, $\oplus$ denotes epistemic interaction rather than numerical addition,
+and $\kappa_I$ is a candidate knowledge invention.
+
+Existing systems demonstrate portions of this cycle. Literature-based
+discovery can expose implicit connections among separated findings
+\cite{swanson1986fish}; symbolic-regression systems can construct interpretable
+relations from data \cite{schmidt2009laws,udrescu2020aifeynman}; and autonomous
+laboratories can connect planning, experimentation, analysis, and revision
+\cite{boiko2023autonomous,szymanski2023autonomous}. Algorithm-discovery systems
+have also produced provably correct or operationally validated procedures
+beyond prior human designs \cite{fawzi2022alphatensor,mankowitz2023alphadev}.
+These results establish increasingly powerful components of machine invention.
+The unknown-unknown criterion adds the requirement that the machine originate
+the consequential object of inquiry rather than receive it as a predefined
+optimization target.
+
+\subsection{\textbf{Degrees of Machine Contribution}}
+
+The presence of an AI system in a scientific workflow does not determine the
+degree of its contribution. We distinguish four levels.
+
+\emph{Machine-assisted invention} occurs when humans formulate the problem,
+construct the decisive hypothesis or concept, and use AI for retrieval,
+calculation, prediction, optimization, or execution. \emph{Machine-generated
+candidate invention} occurs when a system proposes a novel hypothesis, theory,
+method, or design, but novelty, validity, consequence, or attribution remains
+unestablished. \emph{Machine-originated invention} occurs when the machine
+makes the causally essential conceptual contribution and the candidate is
+beyond the known human frontier, but validation is incomplete.
+\emph{Validated machine knowledge invention} occurs only when all attribution
+and epistemic requirements are satisfied.
+
+These levels can be represented as
+
+\begin{equation}
+\begin{aligned}
+L_1&=\operatorname{Assist}_{x},\\
+L_2&=\operatorname{Generate}_{x}(\kappa),\\
+L_3&=L_2\land N(\kappa)\land O_x(\kappa),\\
+L_4&=L_3\land C(\kappa)\land V(\kappa).
+\end{aligned}
+\label{eq:contribution_levels}
+\end{equation}
+
+Only $L_4$ constitutes knowledge invention in the strong sense used by this
+paper. The hierarchy prevents a fluent output from being promoted directly to
+knowledge and prevents a successful human--AI collaboration from being
+misrepresented as autonomous machine origination. It also permits credit to be
+assigned without requiring an all-or-nothing judgment: a system may make an
+important machine-originated contribution even while humans provide
+experimental infrastructure, independent review, or downstream interpretation.
+
+\subsection{\textbf{The Attribution Standard}}
+
+Attribution requires both causal and epistemic evidence. Causally, the machine
+must perform an operation without which the contribution would not have arisen
+through the same workflow. Epistemically, that operation must supply the novel
+relation, object, explanation, or method rather than only supporting work.
+
+Let $W$ be the complete invention workflow, $H$ its human contributions, $x$
+the candidate machine inventor, and $\kappa_I$ the resulting contribution. We
+define the attribution score conceptually as
+
+\begin{equation}
+\begin{aligned}
+\mathcal{A}_{x}(\kappa_I\mid W)
+=\Psi(&\operatorname{CounterfactualNecessity}_{x},\\
+&\operatorname{EpistemicCentrality}_{x},\\
+&\operatorname{HumanSpecification}^{-1},\\
+&\operatorname{Traceability}_{x}),
+\end{aligned}
+\label{eq:attribution_score}
+\end{equation}
+
+where counterfactual necessity measures whether removing the machine's
+contribution prevents the invention, epistemic centrality measures whether the
+machine supplied the decisive intellectual content, inverse human specification
+reduces attribution when humans predetermined the result, and traceability
+measures whether the machine's contribution can be reconstructed from records.
+Equation~\eqref{eq:attribution_score} does not prescribe a universal numerical
+metric. It identifies the evidence that an attribution procedure must assess.
+
+The human-specification term is particularly important. If researchers define
+the target, enumerate the candidate space, specify the evaluation function, and
+interpret the winning result, a machine may discover a powerful solution while
+remaining inside a human-created epistemic frame. This can still be a genuine
+machine discovery, as demonstrated by algorithm-search systems
+\cite{fawzi2022alphatensor,mankowitz2023alphadev}, but it does not by itself
+satisfy the unknown-unknown requirement for superintelligence. Strong knowledge
+invention requires the machine to participate causally in constructing or
+transforming the frame itself.
+
+\subsection{\textbf{The Validation Boundary}}
+
+Before validation, even an extraordinary machine-originated output remains a
+candidate. The distinction is
+
+\begin{equation}
+\begin{aligned}
+\operatorname{Candidate}_{x}(\kappa_I)
+&\land
+\operatorname{IndependentValidate}(\kappa_I)=1\\
+&\Longrightarrow
+\operatorname{KnowledgeInvention}_{x}(\kappa_I).
+\end{aligned}
+\label{eq:validation_boundary}
+\end{equation}
+
+Independent validation does not require that every evaluator be human. It
+requires that acceptance not depend solely on the originating model, the same
+unexamined data, or a criterion constructed after observing the result. The
+validator may be a formal proof checker, replicated experiment, independent
+model, external laboratory, engineering deployment, or combination of methods.
+The appropriate standard depends on the epistemic object.
+
+Reproducibility and transparent reporting are central to reliable knowledge
+accumulation \cite{munafo2017reproducible}. For machine knowledge invention,
+the validation record must additionally preserve model versions, prompts or
+policies, tools, data provenance, intermediate hypotheses, rejected
+alternatives, experimental decisions, and human interventions. Without this
+record, neither novelty nor causal attribution can be assessed reliably.
+
+Validation may also fail. A candidate invention can be rejected, restricted to
+a smaller domain, or revised into a different claim. Such failure is not
+evidence that the system lacks intelligence. It is evidence that candidate
+generation and knowledge invention must remain distinct, just as hypotheses
+and established scientific knowledge remain distinct in human research.
+
+\subsection{\textbf{Knowledge-Invention Proposition}}
+
+The paper's central proposition can now be stated.
+
+\emph{Knowledge-Invention Proposition:} An artificial system demonstrates
+superintelligence when, as a generally intelligent agent, it causally
+originates a consequential epistemic contribution beyond both collective human
+knowledge and the recognized human research agenda, and that contribution
+survives independent, domain-appropriate validation.
+
+Let $\mathcal{K}_{H,t}$ denote collective human knowledge,
+$\mathcal{Q}_{H,t}$ the recognized human research agenda, and $\kappa_I$ the
+candidate contribution. Then
+
+\begin{equation}
+\begin{aligned}
+\operatorname{SI}(x)
+\Longleftrightarrow{}&
+\operatorname{AGI}(x)\\
+&\land \exists\kappa_I:
+\kappa_I\notin\mathcal{K}_{H,t}\\
+&\land q(\kappa_I)\notin\mathcal{Q}_{H,t}\\
+&\land O_x(\kappa_I)=1\\
+&\land C(\kappa_I)=1\\
+&\land V(\kappa_I)=1\\
+&\land
+\mathcal{K}_{H,t+1}
+=\mathcal{K}_{H,t}\cup\{\kappa_I\}.
+\end{aligned}
+\label{eq:knowledge_invention_proposition}
+\end{equation}
+
+The proposition preserves the comparative meaning of superintelligence as
+capability beyond humans \cite{bostrom2014superintelligence}, but specifies
+where the relevant boundary lies. The machine need not outperform every human
+on every activity. It must perform an epistemic act beyond the collective human
+frontier: recognizing knowledge humanity did not know it was missing and
+originating a validated contribution that supplies it.
+
+\subsection{\textbf{From Isolated Success to Demonstrated Capability}}
+
+One accepted result may be insufficient to establish a stable capability for
+knowledge invention. The contribution may result from chance, training-data
+leakage, incomplete novelty search, unrecorded human guidance, or an evaluation
+that favored the generated output. Superintelligence is a capability claim,
+not merely a historical label assigned after one surprising event.
+
+Let $\{\kappa_1,\ldots,\kappa_m\}$ be independently evaluated machine-originated
+contributions across contexts $\{c_1,\ldots,c_m\}$. A stronger demonstration
+requires
+
+\begin{equation}
+\begin{aligned}
+\sum_{i=1}^{m}
+\mathbf{1}
+\bigl[\operatorname{KI}_{x}(\kappa_i)=1\bigr]
+&\geq r,\\
+\operatorname{Diversity}(c_1,\ldots,c_m)
+&\geq \eta,\\
+\operatorname{Replication}(\kappa_i)
+&=1
+\quad \text{for accepted } i,
+\end{aligned}
+\label{eq:repeatable_invention}
+\end{equation}
+
+where $r$ is a required number of successful contributions and $\eta$ a
+context-diversity requirement. Their values should be set by an evaluation
+protocol rather than chosen retrospectively. Repeated success across genuinely
+different unknown unknowns would provide stronger evidence that the system
+possesses a transferable invention capability rather than one specialized
+search procedure.
+
+The evidentiary record for each contribution should include source provenance,
+novelty analysis, machine and human action logs, derivation history,
+alternative hypotheses, predictions, experiments or proofs, independent
+replication, failure conditions, and the final attribution decision. Such
+records make the claim falsifiable: evidence of prior human specification,
+unrecognized source overlap, failed replication, or absent causal contribution
+can defeat the attribution.
+
+Knowledge invention therefore defines the transition proposed in this paper.
+Superintelligence is not determined by how much knowledge a machine contains,
+how fluently it describes that knowledge, or how effectively it optimizes a
+known task. It is determined by whether a generally intelligent machine can
+originate knowledge humanity did not know it was missing. The next section
+addresses the resulting methodological challenge: how to evaluate and falsify
+this capability without specifying the unknown unknowns in advance.

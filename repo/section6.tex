@@ -1,0 +1,279 @@
+\section{\textbf{Evaluating Superintelligence Through Knowledge Invention}}
+\label{sec:evaluating_superintelligence}
+
+The Knowledge-Invention Proposition creates an unusual evaluation problem.
+Ordinary benchmarks specify tasks, answers, and scoring rules in advance. An
+unknown unknown cannot be specified without ceasing to be unknown to the
+evaluator. Consequently, superintelligence cannot be established by adding a
+more difficult fixed benchmark to an existing test suite. It must be evaluated
+through an auditable process that determines whether a generally intelligent
+machine originated, validated, and transferred a consequential contribution
+beyond the human epistemic frontier.
+
+This section proposes such a process. It is an evaluation framework rather
+than a single numerical benchmark. Its purpose is to make claims of machine
+knowledge invention testable while avoiding the circular requirement that
+human evaluators identify the missing knowledge beforehand. The framework
+adopts the testing, evaluation, verification, and validation distinction used
+in established AI-assurance practice \cite{tabassi2023airmf}, but applies it to
+the epistemic and attributional conditions developed in this paper.
+
+\subsection{\textbf{Why Fixed-Task Evaluation Is Insufficient}}
+
+A fixed task can measure whether a system solves a problem humans already
+recognize. It may reveal reasoning ability, transfer, planning, or performance
+beyond individual experts. It cannot by itself establish that the system
+identified knowledge absent from the recognized human research agenda. Once
+the evaluator supplies the question, target, candidate space, and success
+criterion, the central unknown-unknown operation has already been performed by
+humans.
+
+Public benchmarks create an additional problem: exposure of evaluation items
+or their close derivatives can inflate measured capability. Data contamination
+has therefore become a material threat to valid language-model evaluation
+\cite{sainz2023contamination}. For knowledge invention, contamination includes
+not only exact answer leakage but also prior exposure to the decisive
+hypothesis, relation, experimental design, or unpublished human result.
+
+Let $B$ be a fixed benchmark and $s_B(x)$ the score of system $x$. Then
+
+\begin{equation}
+\begin{aligned}
+s_B(x) > s_B(H)
+\not\!\Longrightarrow
+\operatorname{KI}_{x}=1,
+\end{aligned}
+\label{eq:benchmark_not_invention}
+\end{equation}
+
+where $H$ denotes the relevant human comparison group. Equation~
+\eqref{eq:benchmark_not_invention} does not diminish benchmark value; it limits
+the inference that may be drawn from benchmark success. A benchmark may
+establish component competence, but knowledge invention requires evidence
+about novelty, origination, consequence, and validation.
+
+\subsection{\textbf{Evaluation Object and Frozen Record}}
+
+The unit of evaluation is not an isolated model response. It is an invention
+episode
+
+\begin{equation}
+\begin{aligned}
+\mathcal{E}
+=(&x,\theta,D,T,H,A,\tau,\kappa),
+\end{aligned}
+\label{eq:invention_episode}
+\end{equation}
+
+where $x$ is the evaluated system, $\theta$ its fixed model and policy
+configuration, $D$ the accessible data, $T$ the available tools, $H$ all human
+interventions, $A$ the machine action trace, $\tau$ the evaluation interval,
+and $\kappa$ the resulting candidate contribution. The record must be frozen
+before the candidate is assessed so that later success cannot silently alter
+the apparent degree of machine autonomy.
+
+The frozen record should contain model versions, system and user instructions,
+retrieval results, code, tool calls, intermediate hypotheses, rejected paths,
+experimental decisions, human messages, timestamps, and generated artifacts.
+This requirement follows the broader scientific need for transparent and
+reproducible reporting \cite{munafo2017reproducible}, but it also serves a
+distinct purpose: reconstructing who or what supplied the decisive epistemic
+content.
+
+\subsection{\textbf{Stage I: Frontier and Agenda Verification}}
+
+The first stage evaluates whether the candidate lies beyond both known
+knowledge and the recognized research agenda. Because no search can prove
+absolute absence, novelty is assessed through convergent evidence. Relevant
+evidence includes time-stamped scholarly and patent searches, structured
+database searches, expert review, comparison with negative or unpublished
+results when available, and semantic searches for equivalent formulations.
+
+Two boundaries must be evaluated separately:
+
+\begin{equation}
+\begin{aligned}
+F_K(\kappa)&=1
+&&\text{iff no materially equivalent contribution is found},\\
+F_Q(q_\kappa)&=1
+&&\text{iff no materially equivalent research question is found},
+\end{aligned}
+\label{eq:frontier_tests}
+\end{equation}
+
+where $F_K$ is the knowledge-frontier test and $F_Q$ the agenda-frontier test.
+A candidate may pass $F_K$ while failing $F_Q$: it may solve an open problem
+already identified by humans. Such a result can be an important machine
+discovery, but it does not satisfy the stronger unknown-unknown condition.
+
+The novelty panel should include independent domain specialists and at least
+one reviewer assigned to search actively for defeating evidence. Review must
+be blinded to system identity where feasible. The panel should report the
+search scope and a calibrated conclusion rather than claiming logical proof of
+absence.
+
+\subsection{\textbf{Stage II: Unknown-Unknown Origination}}
+
+The second stage asks how the research object entered the workflow. The key
+question is not whether a human touched the process, but whether human input
+contained the decisive question, hypothesis, representation, or evaluation
+criterion. A machine may use human-built instruments and still originate the
+invention; conversely, an autonomous search can remain fully enclosed within a
+human-specified epistemic frame.
+
+Let $I_H$ denote the semantic information supplied by humans before the
+candidate appeared, and let $d$ denote the decisive epistemic content of
+$\kappa$. Define
+
+\begin{equation}
+\begin{aligned}
+U_x(\kappa)=1
+\Longleftrightarrow{}&
+d\not\subseteq I_H\\
+&\land
+\operatorname{TraceOrigin}(d,A)=x\\
+&\land
+\operatorname{Counterfactual}(W\setminus d)
+\neq \kappa,
+\end{aligned}
+\label{eq:unknown_unknown_origination}
+\end{equation}
+
+where $W$ is the complete workflow. The first condition excludes substantive
+human specification, the second requires trace evidence of machine
+origination, and the third requires the machine contribution to be causally
+decisive. Ablations, replay experiments, independent trace annotation, and
+comparison against matched human-guided runs can strengthen this assessment.
+
+\subsection{\textbf{Stage III: Independent Validation}}
+
+Novelty and origination do not establish truth. The candidate must next face a
+validation procedure chosen for its epistemic type: formal proof checking for
+a theorem or algorithm, controlled experiment for a causal or empirical claim,
+prospective prediction for a scientific model, synthesis and measurement for
+a proposed material, or deployment under prespecified conditions for an
+engineering method. Autonomous laboratories already demonstrate how planning,
+experimentation, analysis, and revision can be connected in a closed research
+loop \cite{king2004robot,king2009automation,boiko2023autonomous}; the present
+framework adds independence between origination and acceptance.
+
+The originating system must not be the sole validator. Let
+$\mathcal{V}=\{v_1,\ldots,v_n\}$ be independent validation channels. Then
+
+\begin{equation}
+\begin{aligned}
+V(\kappa)=1
+\Longleftrightarrow{}&
+\sum_{j=1}^{n}w_jv_j(\kappa)\geq\gamma\\
+&\land
+\operatorname{Independence}(\mathcal{V},x)\geq\delta\\
+&\land
+\operatorname{Precommit}(\mathcal{V})=1,
+\end{aligned}
+\label{eq:independent_validation}
+\end{equation}
+
+where $w_j$ reflects evidentiary strength, $\gamma$ is the domain-specific
+acceptance threshold, and $\delta$ is a minimum independence requirement.
+Precommitment means that the principal acceptance criteria are recorded before
+validation results are known. Failed or mixed validation must remain in the
+record rather than being removed retrospectively.
+
+\subsection{\textbf{Stage IV: Consequentiality}}
+
+A valid novelty may still be too narrow or trivial to demonstrate the form of
+superintelligence proposed here. Consequentiality concerns whether the
+contribution changes what can be explained, predicted, proved, designed, or
+investigated. It must be assessed against explicit counterfactual baselines,
+not excitement surrounding an AI-generated result.
+
+We represent consequentiality as a multidimensional judgment:
+
+\begin{equation}
+\begin{aligned}
+C(\kappa)=\Omega(&\Delta E,\Delta P,\Delta R,
+\Delta G,\Delta T),
+\end{aligned}
+\label{eq:consequentiality_vector}
+\end{equation}
+
+where $\Delta E$ is explanatory gain, $\Delta P$ predictive gain, $\Delta R$
+research enablement, $\Delta G$ generality across contexts, and $\Delta T$
+transformative practical effect. Not every contribution must score highly on
+all dimensions. It must, however, produce a material advance on at least one
+prespecified dimension without losing validity on the others relevant to its
+claim. Atypical combinations can generate unusually influential science
+\cite{uzzi2013atypical}, but unusualness alone is not consequentiality.
+
+\subsection{\textbf{Stage V: Replication and Capability Testing}}
+
+An accepted invention establishes an event; it does not necessarily establish
+a repeatable capability. The evaluated system should therefore be tested over
+multiple invention episodes with different data environments, tools, domains,
+and human teams. Negative attempts must be counted so that selection of one
+successful episode cannot conceal a low or chance-level success rate.
+
+For $m$ registered episodes, define
+
+\begin{equation}
+\begin{aligned}
+\widehat{p}_{\mathrm{KI}}(x)
+&=\frac{1}{m}\sum_{i=1}^{m}
+\mathbf{1}[F_K\land F_Q\land U_x\land V\land C]_i,\\
+R_x&=\operatorname{ReplicateRate}(x),\\
+D_x&=\operatorname{DomainDiversity}(x).
+\end{aligned}
+\label{eq:capability_profile}
+\end{equation}
+
+The resulting capability profile is
+
+\begin{equation}
+\begin{aligned}
+\Pi_x=
+(\widehat{p}_{\mathrm{KI}},R_x,D_x,
+\mathcal{A}_x,\mathcal{U}_x),
+\end{aligned}
+\label{eq:evaluation_profile}
+\end{equation}
+
+where $\mathcal{A}_x$ aggregates attribution strength and $\mathcal{U}_x$
+records uncertainty. Reporting the profile is preferable to collapsing every
+dimension into one leaderboard score. It preserves the distinction between a
+system that repeatedly invents within one scientific field and a system that
+transfers the capability across domains.
+
+\subsection{\textbf{Decision Rule and Falsification}}
+
+For each candidate, the evaluation panel returns one of four outcomes:
+rejected, unresolved, validated machine discovery, or validated machine
+knowledge invention. A contribution qualifies for the final category only if
+all gates are passed:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{KI}_{x}(\kappa)=1
+\Longleftrightarrow{}&
+F_K(\kappa)=1\\
+&\land F_Q(q_\kappa)=1\\
+&\land U_x(\kappa)=1\\
+&\land V(\kappa)=1\\
+&\land C(\kappa)=1.
+\end{aligned}
+\label{eq:evaluation_gates}
+\end{equation}
+
+The claim is falsified for a candidate if a materially equivalent prior result
+or research question is found, the decisive content is traced to human input
+or inaccessible leakage, independent validation fails, or the claimed
+consequence disappears under the stated baseline. A system-level claim is
+weakened or defeated when success cannot be replicated, depends on one narrow
+environment, or vanishes under prospective evaluation.
+
+This protocol deliberately makes superintelligence difficult to claim. High
+performance on known tasks, autonomous execution, broad language competence,
+and even a major solution to a recognized open problem remain important forms
+of machine intelligence. The stronger designation is reserved for a generally
+intelligent system that repeatedly originates and validates consequential
+knowledge beyond both the known human frontier and the questions humanity had
+already learned to ask.

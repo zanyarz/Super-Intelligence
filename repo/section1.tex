@@ -1,0 +1,266 @@
+\section{\textbf{Introduction}}
+\label{sec:introduction}
+
+Intelligence, consciousness, general intelligence, and superintelligence are
+frequently placed on a single ascending scale. This treatment obscures the
+different questions addressed by these concepts. Intelligence concerns a
+system's capacity to use information in selecting among possible actions,
+states, or outputs. Consciousness concerns the organization and, in its
+phenomenal sense, the subjective character of experience. General intelligence
+concerns the breadth, transferability, and adaptive organization of agency.
+Superintelligence, we argue, concerns a further capability: moving beyond the
+collective human frontier by inventing validated knowledge that humanity did
+not previously possess or recognize as an object of inquiry.
+
+Our earlier work defined intelligence at its minimal foundation as
+information-dependent selection while distinguishing intelligence from both
+functional and phenomenal consciousness \cite{zohourian2026intelligence}. On
+this account, intelligence is graded rather than binary. A simple conditional
+selection may instantiate an elementary decision structure, whereas advanced
+systems can coordinate memory, inference, planning, metacognition, and action.
+Increasing sophistication can therefore produce more organized intelligence
+without proving the existence or character of subjective experience.
+
+Consciousness should likewise not be restricted in advance to one biological,
+humanlike, or computational form. We previously argued that phenomenal,
+observable, and functional claims about consciousness must be separated and
+that language can serve as a unifying interface among specialized artificial
+minds \cite{zohourian2026language}. Language is not merely an input--output
+modality under this account. It can provide a shared representational medium
+through which perceptual, reasoning, memory, and supervisory systems exchange
+information. Such coordination may enable increasingly integrated levels of
+functional artificial consciousness without, by itself, establishing
+phenomenal experience.
+
+These distinctions become essential when considering artificial general
+intelligence (AGI). Our account of AGI as integrated multimodal agency treats
+general intelligence and consciousness as related but non-identical dimensions
+\cite{zohourian2026agi}. Neither multimodality nor consciousness alone supplies
+general intelligence. AGI requires the persistent coordination of perception,
+memory, reasoning, objectives, planning, metacognition, and adaptive action
+across unfamiliar tasks, domains, and environments. This view is consistent
+with accounts that relate intelligence to an agent's ability to achieve goals
+across environments rather than to performance on one fixed task
+\cite{legg2007universal} and with broader treatments of AGI as adaptable,
+domain-general intelligence rather than a collection of isolated task systems
+\cite{goertzel2014agi}.
+
+Future work will introduce \emph{AGI-Former}, a neural architecture intended to
+operationalize this conception of integrated multimodal agency. The present
+paper does not specify that architecture. It instead addresses the conceptual
+problem that follows from it: even if a machine realizes AGI, what additional
+capability would make it superintelligent?
+
+\subsection{\textbf{From General Intelligence to Superintelligence}}
+
+General intelligence and superintelligence are sometimes treated as
+interchangeable descriptions of an increasingly capable system. They instead
+identify different functional achievements. AGI denotes integrated,
+transferable, and adaptive agency across tasks, domains, modalities, and
+environments. Superintelligence denotes capability beyond the collective human
+frontier: the capacity of a generally intelligent machine to originate
+validated knowledge that humanity did not previously possess or recognize as
+an object of inquiry. This retains the established comparative meaning of
+superintelligence as capability exceeding human intelligence
+\cite{bostrom2014superintelligence}, while specifying the epistemic capability
+that distinguishes it from AGI in the present framework.
+
+An AGI could therefore remain bounded by existing human knowledge. It might
+reason across disciplines, operate tools, adapt plans, and solve difficult
+problems while deriving its objectives and conceptual boundaries from questions
+already posed by humans. These abilities would establish general agency, but
+they would not alone demonstrate superintelligence. The transition occurs when
+the machine ceases to be only a general user of known science and becomes an
+originator of new science.
+
+This distinction can be expressed directly:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{AGI}(x)
+&\not\Rightarrow \operatorname{SI}(x),\\
+\operatorname{SI}(x)
+&\Rightarrow \operatorname{AGI}(x).
+\end{aligned}
+\label{eq:agi_si_relation}
+\end{equation}
+
+The additional condition is not greater speed, scale, memory, or performance
+within a predetermined task. It is machine-originated knowledge invention. To
+state this condition precisely, the distinction between known unknowns and
+unknown unknowns must first be established.
+
+\subsection{\textbf{Known Unknowns and Unknown Unknowns}}
+
+Scientific research commonly begins with a \emph{known unknown}: a question,
+target, mechanism, or missing value that researchers have already identified
+but not yet resolved. A machine may answer such a question more quickly or
+accurately than human researchers and thereby make a major scientific
+contribution. The machine is operating beyond prior human performance, but the
+epistemic destination was already represented within human inquiry.
+
+An \emph{unknown unknown} is stronger. It is a consequential question,
+relation, phenomenon, explanatory possibility, or field of inquiry that
+humanity has neither resolved nor recognized as a target. Unknown unknowns are
+not simply entries missing from a database. Before they are exposed, humans do
+not know that a particular question should be asked, that two bodies of
+knowledge should be connected, that an observed anomaly signifies a new
+mechanism, or that a new conceptual object is possible.
+
+Let $\mathcal{K}_{H,t}$ denote the collective body of justified human knowledge
+at time $t$, and let $\mathcal{Q}_{H,t}$ denote the set of questions, hypotheses,
+and research targets explicitly recognized by the human scientific community.
+For a candidate epistemic contribution $\kappa$,
+
+\begin{equation}
+\begin{aligned}
+\kappa \in \mathcal{Q}_{H,t}
+\land \kappa \notin \mathcal{K}_{H,t}
+&\quad\Longrightarrow\quad
+\kappa\ \text{is a known unknown},\\
+\kappa \notin \mathcal{Q}_{H,t}
+\land \kappa \notin \mathcal{K}_{H,t}
+&\quad\Longrightarrow\quad
+\kappa\ \text{is an unknown unknown}.
+\end{aligned}
+\label{eq:known_unknowns}
+\end{equation}
+
+The second relation cannot be established solely by observing that a generated
+sentence is absent from a training corpus. Semantic novelty, scientific
+significance, and epistemic validity are different properties. A system must
+identify or construct the previously unrecognized object of inquiry, explain
+its relation to existing knowledge, and produce evidence through which the
+claim can be independently assessed.
+
+Existing AI-for-science results demonstrate important progress without yet
+collapsing this distinction. AI has recovered symbolic relations from data
+\cite{udrescu2020aifeynman}, guided mathematicians toward new conjectures and
+theorems \cite{davies2021mathematics}, predicted protein structures at high
+accuracy \cite{jumper2021alphafold}, and expanded computational catalogues of
+candidate stable materials \cite{merchant2023materials}. These achievements
+show that machine learning can contribute to discovery at the scientific
+frontier. They also remain embedded in research problems, objectives, data,
+and validation practices established by human investigators. Under the present
+framework, their scientific importance is not in question; what remains to be
+established is whether a machine can itself expose an unknown unknown and
+originate the knowledge through which it becomes understood.
+
+\subsection{\textbf{Knowledge Invention}}
+
+We use \emph{knowledge invention} for the machine-originated production of a
+new epistemic object that lies beyond the collective human frontier and becomes
+justified through appropriate validation. The term includes the invention of
+new explanatory theories, conceptual structures, scientific methods,
+architectures, or research directions. It does not imply that natural laws are
+arbitrarily created. A machine may discover a previously unknown phenomenon or
+relation, but the representation, explanation, and generalizable body of
+knowledge constructed from that discovery constitute an invented epistemic
+contribution.
+
+Knowledge fusion and knowledge discovery are principal routes toward knowledge
+invention. Knowledge fusion connects bodies of evidence, concepts, models, or
+disciplines whose consequential relation was not previously recognized.
+Knowledge discovery identifies a previously unknown phenomenon, mechanism,
+regularity, entity, or law. Either process may produce knowledge invention when
+the machine converts its result into a novel, consequential, and validated
+addition to collective knowledge:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{Fusion}_{x}
+&\longrightarrow \kappa_{F},\\
+\operatorname{Discovery}_{x}
+&\longrightarrow \kappa_{D},\\
+\operatorname{Validate}(\kappa_{F}\lor\kappa_{D})=1
+&\longrightarrow \operatorname{KI}_{x}(\kappa),
+\end{aligned}
+\label{eq:routes_to_invention}
+\end{equation}
+
+where $\operatorname{KI}_{x}(\kappa)$ denotes knowledge invention attributable
+to machine $x$. The arrows represent possible epistemic pathways rather than a
+claim that every fusion or discovery yields invention. Most recombinations are
+not consequential, many hypotheses are false, and some discoveries answer
+questions already posed by humans. Knowledge invention therefore requires a
+stronger conjunction:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{KI}_{x}(\kappa)
+\Longleftrightarrow{}&
+\kappa \notin \mathcal{K}_{H,t}\\
+&\land \kappa \notin \mathcal{Q}_{H,t}\\
+&\land \operatorname{Originate}_{x}(\kappa)\\
+&\land \operatorname{Consequential}(\kappa)\\
+&\land \operatorname{Validate}(\kappa)=1.
+\end{aligned}
+\label{eq:knowledge_invention}
+\end{equation}
+
+The origination condition does not require isolation from humans. Scientific
+work is commonly distributed across people, instruments, institutions, and
+computational systems. It requires that the machine make the causally essential
+move that exposes or constructs the unknown unknown, rather than merely execute
+a fully specified human procedure. The consequentiality condition excludes
+arbitrary novelty. The validation condition may be satisfied through
+controlled experiment, mathematical proof, reproducible computation,
+successful engineering realization, or another method appropriate to the
+domain. Until validation occurs, the output remains a candidate invention or
+hypothesis rather than knowledge.
+
+Recent systems already integrate language models with literature search, code,
+planning, laboratory interfaces, and experimental execution
+\cite{boiko2023autonomous}, while autonomous laboratories combine computation,
+machine learning, robotics, and empirical feedback in closed experimental loops
+\cite{szymanski2023autonomous}. Reviews of AI-enabled science similarly show
+that learning systems now participate across hypothesis generation, prediction,
+experimental design, and analysis \cite{wang2023scientific}. These systems
+provide architectural and empirical precursors to machine knowledge invention.
+They do not by their existence satisfy Equation~\eqref{eq:knowledge_invention},
+because scientific autonomy within a human-specified objective is not identical
+to originating an unrecognized object of inquiry.
+
+\subsection{\textbf{The Defining Transition to Superintelligence}}
+
+Under the framework proposed here, AGI is necessary but not sufficient for
+superintelligence. An AGI may transfer knowledge, adapt to unfamiliar
+environments, and pursue objectives across domains while remaining bounded by
+the human knowledge and research targets available to it. Superintelligence
+begins when general intelligence can originate and validate knowledge beyond
+that collective frontier:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{SI}(x)
+\Longleftrightarrow{}&
+\operatorname{AGI}(x)\\
+&\land \exists\kappa\;\operatorname{KI}_{x}(\kappa)\\
+&\land
+\mathcal{K}_{H,t+1}
+=\mathcal{K}_{H,t}\cup\{\kappa\},\\
+\operatorname{SI}(x)
+&\Rightarrow \operatorname{AGI}(x),\\
+\operatorname{AGI}(x)
+&\not\Rightarrow \operatorname{SI}(x).
+\end{aligned}
+\label{eq:superintelligence_definition}
+\end{equation}
+
+The central thesis of this paper is therefore that \emph{superintelligence is
+general intelligence capable of originating validated knowledge beyond the
+collective human frontier, including the identification and resolution of
+unknown unknowns}. Knowledge fusion and knowledge discovery are not three
+parallel requirements alongside knowledge invention. They are principal
+generative routes through which knowledge invention may occur.
+
+This definition does not equate superintelligence with omniscience,
+infallibility, consciousness, model size, or universal superiority on every
+task. It makes a narrower and testable claim: the defining evidence for
+superintelligence is a machine-originated epistemic contribution that humanity
+did not previously possess or explicitly seek, that materially extends human
+understanding, and that survives independent validation. The remainder of the
+paper distinguishes this capability from general intelligence,
+examines knowledge fusion and discovery as routes to invention, and develops
+criteria for attributing knowledge invention to an artificial system without
+mistaking recombination, hallucination, or unverified novelty for science.

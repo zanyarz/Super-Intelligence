@@ -1,0 +1,293 @@
+\section{\textbf{Knowledge Discovery as a Pathway to Knowledge Invention}}
+\label{sec:knowledge_discovery}
+
+Knowledge fusion derives a consequential relation by connecting bodies of
+knowledge that were previously separated. Knowledge discovery begins from a
+different epistemic condition: some feature of reality is not adequately
+represented in existing knowledge, even after known information has been
+assembled. The missing object may be a phenomenon, entity, mechanism,
+variable, regularity, law, material, algorithm, or causal relation. A discovery
+system must therefore do more than reorganize descriptions. It must establish
+that reality contains a structure that collective human knowledge did not
+previously capture.
+
+Machine-assisted discovery is already an active scientific program. Symbolic
+regression has recovered compact physical relations from experimental data
+\cite{schmidt2009laws,udrescu2020aifeynman}; sparse identification has extracted
+governing dynamical equations from measurements \cite{brunton2016sindy}; and
+representation-learning systems have proposed latent state variables from raw
+observations \cite{chen2022variables}. In biology and chemistry, machine
+learning has contributed to protein-structure prediction
+\cite{jumper2021alphafold}, antibiotic identification
+\cite{stokes2020antibiotic}, materials prediction
+\cite{merchant2023materials}, and closed-loop experimental synthesis
+\cite{szymanski2023autonomous}. These achievements establish that machines can
+participate in multiple stages of discovery. The present framework asks when
+that participation becomes machine-originated knowledge invention.
+
+\subsection{\textbf{Prediction, Detection, and Discovery}}
+
+Prediction is not identical to discovery. A system may accurately map inputs
+to outputs without identifying a new entity, mechanism, or explanatory
+structure. Detection is also insufficient. A detector may locate an anomaly or
+classify an unfamiliar object while leaving its significance unexplained.
+Optimization can improve an established design without changing the relevant
+knowledge. These operations become components of discovery only when they
+support a justified claim about something previously unknown.
+
+Let $o$ denote an observation, $p$ a prediction, $a$ a detected anomaly, and
+$\kappa_D$ a candidate discovery. The non-equivalence is
+
+\begin{equation}
+\begin{aligned}
+\operatorname{Predict}_{x}(p\mid o)
+&\not\Rightarrow \operatorname{Discover}_{x}(\kappa_D),\\
+\operatorname{Detect}_{x}(a\mid o)
+&\not\Rightarrow \operatorname{Discover}_{x}(\kappa_D),\\
+\operatorname{Optimize}_{x}(y)
+&\not\Rightarrow \operatorname{Discover}_{x}(\kappa_D).
+\end{aligned}
+\label{eq:prediction_not_discovery}
+\end{equation}
+
+A prediction may contribute evidence; an anomaly may motivate a hypothesis;
+and optimization may expose an unexpected solution. Discovery nevertheless
+requires an epistemic transition from an output to a validated claim about the
+world or about a formally defined possibility space.
+
+This distinction is illustrated by data-driven law discovery. Sparse
+identification methods can produce parsimonious governing equations from noisy
+measurements \cite{brunton2016sindy}, while symbolic-regression systems can
+recover interpretable relations rather than only point predictions
+\cite{schmidt2009laws,udrescu2020aifeynman}. Their explanatory representations
+move closer to discovery because they state a general relation that can be
+tested outside the observations used to construct it. Even then, recovery of a
+known law is rediscovery or methodological validation, not an extension of the
+human knowledge frontier.
+
+\subsection{\textbf{Objects of Machine Discovery}}
+
+Machine discovery may target several types of epistemic object. A
+\emph{phenomenon} is an observed behavior or effect not adequately represented
+by existing theory. An \emph{entity} is a previously unknown object, class,
+material, biological structure, or computational construction. A
+\emph{mechanism} explains how interacting processes produce an effect. A
+\emph{variable} supplies a representation required to describe a system. A
+\emph{regularity} expresses a stable relation among observations, and a
+\emph{law} provides a generalizable mathematical or causal structure. An
+\emph{algorithm} is a previously unknown procedure that produces a formally or
+empirically verifiable result.
+
+These objects require different validation standards. A candidate material
+must be computationally and ultimately experimentally assessed; a natural law
+must predict across conditions; a causal mechanism must survive intervention;
+and an algorithm may be established through proof, exhaustive verification, or
+implementation benchmarks. Machine-generated algorithmic results demonstrate
+the importance of this distinction. AlphaTensor discovered provably correct
+matrix-multiplication algorithms that improved on known procedures
+\cite{fawzi2022alphatensor}, and AlphaDev produced new sorting routines that
+were validated and incorporated into a widely used standard library
+\cite{mankowitz2023alphadev}. These are genuine algorithmic discoveries within
+human-formulated problem spaces. Under the present account, they demonstrate a
+major component of knowledge invention but not yet the autonomous exposure of
+an unknown unknown.
+
+Let $\Omega$ denote the relevant space of possible objects and
+$\mathcal{R}_{H,t}(\Omega)$ the region represented in collective human
+knowledge at time $t$. A candidate machine discovery occupies
+
+\begin{equation}
+\begin{aligned}
+\kappa_D &\in \Omega,\\
+\kappa_D &\notin \mathcal{R}_{H,t}(\Omega),\\
+\operatorname{Represent}_{x}(\kappa_D)
+&=1.
+\end{aligned}
+\label{eq:discovery_object}
+\end{equation}
+
+The representation condition requires the machine to distinguish the object
+from noise and express it in a form that supports examination. It does not yet
+establish that the representation is true, important, or attributable to the
+machine.
+
+\subsection{\textbf{The Discovery Cycle}}
+
+Knowledge discovery requires a connected cycle rather than a single model
+output. The cycle begins with observations and proceeds through anomaly or
+structure detection, hypothesis formation, explanatory modeling, discriminating
+tests, and validation:
+
+\begin{equation}
+\begin{aligned}
+\mathcal{O}_{t}
+&\longrightarrow \mathcal{A}_{x}\\
+&\longrightarrow \mathcal{H}_{x}\\
+&\longrightarrow \mathcal{M}_{x}\\
+&\longrightarrow \mathcal{T}_{x}\\
+&\longrightarrow \mathcal{V}(\kappa_D),
+\end{aligned}
+\label{eq:discovery_cycle}
+\end{equation}
+
+where $\mathcal{O}_{t}$ contains observations, $\mathcal{A}_{x}$ contains
+machine-identified anomalies or structures, $\mathcal{H}_{x}$ contains
+hypotheses, $\mathcal{M}_{x}$ contains explanatory models,
+$\mathcal{T}_{x}$ contains discriminating tests, and
+$\mathcal{V}(\kappa_D)$ is the validation result.
+
+The cycle need not be linear. Failed tests may revise the representation,
+generate alternative hypotheses, expose measurement error, or cause the system
+to seek new observations. Autonomous laboratories demonstrate how prediction,
+planning, experimentation, interpretation, and revision can be connected in a
+closed loop \cite{boiko2023autonomous,szymanski2023autonomous}. Earlier robot
+scientists likewise showed that machine-generated hypotheses could be selected
+and tested experimentally \cite{king2004robot,king2009automation}. These systems
+provide architectural precedents for the discovery cycle, although their
+research domains and objectives were established by humans.
+
+For discovery beyond the human frontier, the machine must exercise epistemic
+control across the cycle. It must determine which observation is anomalous,
+which hypothesis is explanatory rather than merely predictive, which test can
+distinguish competing accounts, and how the result changes the candidate
+knowledge claim. A pipeline whose scientific choices are supplied entirely by
+humans may automate discovery work without realizing machine discovery in this
+strong sense.
+
+\subsection{\textbf{From Anomaly to Explanation}}
+
+Anomalies are important because they may signal that an existing model is
+incomplete, but most anomalies are not discoveries. They may result from noise,
+instrument error, data leakage, distribution shift, implementation defects, or
+unrepresented confounders. A discovery system must discriminate among these
+possibilities before attributing an anomaly to a new feature of reality.
+
+Let $a$ be an anomaly under current model $M_H$, and let
+$\{h_1,\ldots,h_n\}$ be competing explanations. The system should select a test
+$\tau^{*}$ according to its expected ability to discriminate among them:
+
+\begin{equation}
+\begin{aligned}
+\tau^{*}
+&=\arg\max_{\tau\in\mathcal{T}}
+\operatorname{Disc}
+(\tau;h_1,\ldots,h_n),\\
+\operatorname{Disc}
+(\tau;h_1,\ldots,h_n)
+&>\delta,
+\end{aligned}
+\label{eq:discriminating_test}
+\end{equation}
+
+where $\operatorname{Disc}$ measures the expected discriminating value and
+$\delta$ is a domain-appropriate threshold. Strategic experiment selection has
+been proposed as a means of accelerating collective scientific discovery
+\cite{rzhetsky2015experiments}. Within the present framework, the stronger
+requirement is that the machine select tests in service of a hypothesis it
+causally originated about a previously unrecognized object.
+
+Explanation also protects against mistaking correlation for discovery. A model
+may predict an outcome from a proxy variable while failing under intervention
+or distributional change. A candidate discovery should therefore identify
+conditions under which its explanation would fail. Falsifiable consequences,
+counterfactual behavior, and out-of-distribution predictions provide stronger
+evidence than retrospective fit alone.
+
+\subsection{\textbf{Discovery-Driven Knowledge Invention}}
+
+A validated discovery becomes knowledge invention when the machine originates
+both the discovery object and the epistemic structure through which it enters
+collective knowledge. Let $\operatorname{DKI}_{x}(\kappa_D)$ denote
+discovery-driven knowledge invention. Then
+
+\begin{equation}
+\begin{aligned}
+\operatorname{DKI}_{x}(\kappa_D)
+\Longleftrightarrow{}&
+\kappa_D\notin\mathcal{K}_{H,t}\\
+&\land q_D\notin\mathcal{Q}_{H,t}\\
+&\land \operatorname{Discover}_{x}(\kappa_D)\\
+&\land \operatorname{Originate}_{x}(\kappa_D\mid W)\\
+&\land \operatorname{Explain}_{x}
+(\kappa_D,\mathcal{K}_{H,t})\\
+&\land \operatorname{Validate}(\kappa_D)=1\\
+&\land \operatorname{Consequential}(\kappa_D)=1.
+\end{aligned}
+\label{eq:discovery_knowledge_invention}
+\end{equation}
+
+The first two conditions place the object and its motivating question beyond
+current human knowledge and inquiry. The discovery condition requires the
+machine to identify the object from evidence or formal search. The origination
+condition assigns the causally essential epistemic step to the machine. The
+explanation condition relates the object to existing knowledge, while
+validation and consequentiality prevent false, trivial, or uninterpretable
+novelty from being classified as knowledge invention.
+
+This definition separates three levels of achievement:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{CandidateDiscovery}
+&\subset
+\operatorname{ValidatedDiscovery}\\
+&\subset
+\operatorname{DiscoveryDrivenKnowledgeInvention}.
+\end{aligned}
+\label{eq:discovery_levels}
+\end{equation}
+
+A candidate discovery is an unvalidated representation or hypothesis. A
+validated discovery establishes that the object or relation is real within the
+relevant standard. Discovery-driven knowledge invention additionally requires
+machine origination beyond a human-recognized research target and integration
+of the result into an explanatory epistemic structure.
+
+\subsection{\textbf{Failure Modes and Validation Requirements}}
+
+Machine discovery is vulnerable to systematic errors. \emph{Data artifacts}
+can masquerade as phenomena. \emph{Overfitting} can produce laws that describe
+observations but fail elsewhere. \emph{Proxy discovery} can identify a
+predictive correlate instead of a mechanism. \emph{Search-space confinement}
+can make an output appear unprecedented even though the system explored only a
+human-specified formal space. \emph{Measurement dependence} can create entities
+that disappear under a different instrument or preprocessing method.
+\emph{Rediscovery} can reproduce knowledge absent from the system's immediate
+context but present elsewhere in the literature. Finally,
+\emph{validation capture} occurs when the originating model also defines and
+evaluates the only test of its claim.
+
+For candidate discovery $\kappa_D$, the evidentiary package should contain
+
+\begin{equation}
+\begin{aligned}
+\mathcal{E}(\kappa_D)=\{&
+\operatorname{ObservationProvenance},
+\operatorname{NoveltySearch},\\
+&\operatorname{AlternativeHypotheses},
+\operatorname{DiscriminatingTests},\\
+&\operatorname{Replication},
+\operatorname{BoundaryConditions},
+\operatorname{Validation}\}.
+\end{aligned}
+\label{eq:discovery_evidence}
+\end{equation}
+
+Observation provenance preserves the origin and transformations of the data.
+Novelty search tests whether the discovery already exists in collective
+knowledge. Alternative hypotheses prevent premature commitment.
+Discriminating tests separate the proposed account from competitors.
+Replication assesses whether the result survives independent implementation,
+measurement, or experimentation. Boundary conditions specify where the claim
+should and should not hold. Validation records the evidence and standards used
+to accept the contribution.
+
+Knowledge discovery therefore identifies what reality or a formal possibility
+space contains beyond existing representation. It becomes a pathway to
+superintelligence only when a generally intelligent machine originates an
+unknown object of inquiry, constructs and tests an explanation, and produces a
+validated, consequential addition to collective human knowledge. Knowledge
+fusion and knowledge discovery can also interact: fusion may reveal the
+question that discovery answers, while discovery may supply the missing object
+that makes a deeper fusion possible. The next section integrates these pathways
+under the paper's central concept of knowledge invention.

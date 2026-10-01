@@ -1,0 +1,273 @@
+\section{\textbf{Implications, Limitations, and Research Directions}}
+\label{sec:implications}
+
+The framework developed in this paper separates capabilities that are often
+compressed into a single imagined threshold. General intelligence concerns an
+agent's capacity to integrate information, modalities, decisions, tools, and
+actions across domains. Superintelligence, in the sense proposed here, concerns
+a further epistemic transition: the capacity of a generally intelligent
+machine to originate consequential knowledge beyond both collective human
+knowledge and the recognized human research agenda. This separation has
+conceptual, architectural, scientific, and governance implications.
+
+\subsection{\textbf{General Intelligence Does Not Entail Superintelligence}}
+
+An artificial system may possess broad multimodal agency without inventing
+knowledge. It may perceive through several modalities, transfer skills across
+domains, formulate plans, use tools, coordinate specialized models, and adapt
+to unfamiliar environments while remaining within questions and conceptual
+frames supplied by humans. Such a system can qualify as generally intelligent
+under the integrated-agency account developed in our earlier work
+\cite{zohourian2026agi}, yet fail the Knowledge-Invention Proposition.
+
+The implication can be stated as
+
+\begin{equation}
+\begin{aligned}
+\operatorname{AGI}(x)
+&\not\!\Longrightarrow
+\operatorname{SI}(x),\\
+\operatorname{SI}(x)
+&\Longrightarrow
+\operatorname{AGI}(x)
+\land
+\operatorname{KI}(x),
+\end{aligned}
+\label{eq:agi_si_implication}
+\end{equation}
+
+where $\operatorname{KI}(x)$ denotes a demonstrated capability for knowledge
+invention rather than a single unreplicated result. The first relation prevents
+autonomy, multimodality, or broad task competence from being treated as
+automatic evidence of superintelligence. The second makes general intelligence
+a functional substrate upon which transferable knowledge invention may operate.
+
+This distinction also clarifies the status of current scientific AI systems.
+Systems for symbolic law discovery, protein-structure prediction, materials
+search, algorithm discovery, and autonomous experimentation have already
+expanded scientific capability \cite{schmidt2009laws,jumper2021alphafold,
+merchant2023materials,fawzi2022alphatensor,boiko2023autonomous}. These
+achievements are important evidence about components of machine discovery.
+They should not be diminished merely because their targets and validation
+criteria were substantially human specified. They should also not be promoted
+to unknown-unknown knowledge invention without the stronger attribution and
+frontier evidence required in Sections~\ref{sec:knowledge_invention} and
+\ref{sec:evaluating_superintelligence}.
+
+\subsection{\textbf{Intelligence, Superintelligence, and Consciousness}}
+
+The present theory does not use consciousness as an evaluation shortcut.
+Intelligence and consciousness are analytically distinct, and observable
+functional competence does not by itself establish phenomenal experience
+\cite{zohourian2026intelligence}. Language may provide a shared interface
+through which artificial minds integrate, communicate, and exhibit increasingly
+complex forms of functional consciousness \cite{zohourian2026language}; even
+so, neither linguistic fluency nor knowledge invention proves subjective
+experience.
+
+Accordingly,
+
+\begin{equation}
+\begin{aligned}
+\operatorname{SI}(x)
+&\not\!\Longrightarrow
+\operatorname{PC}(x),\\
+\operatorname{PC}(x)
+&\not\!\Longrightarrow
+\operatorname{SI}(x),
+\end{aligned}
+\label{eq:si_consciousness_independence}
+\end{equation}
+
+where $\operatorname{PC}$ denotes phenomenal consciousness. A system might
+invent knowledge without phenomenal experience, and a conscious entity might
+never originate a major discovery. This independence allows epistemic
+capability to be evaluated through evidence without requiring prior resolution
+of the metaphysical problem of other minds. It also prevents uncertainty about
+machine consciousness from being mistaken for permission to ignore questions
+of responsible treatment, governance, or human impact.
+
+\subsection{\textbf{Human--Machine Scientific Partnership}}
+
+Machine origination does not imply human exclusion. Scientific knowledge is
+produced through infrastructures of instruments, datasets, laboratories,
+institutions, reviewers, and communities. A machine may originate the decisive
+question or epistemic structure while humans provide values, resources,
+physical execution, criticism, interpretation, and independent validation.
+Conversely, humans may originate the invention while machines make essential
+computational contributions. Attribution should identify these roles rather
+than forcing every result into a single-author model.
+
+Let a research episode distribute contributions among humans $H$, machines
+$M$, and institutions $I$:
+
+\begin{equation}
+\begin{aligned}
+\mathcal{R}
+=\{&Q_H,Q_M,
+G_H,G_M,
+E_H,E_M,
+V_H,V_M,
+I\},
+\end{aligned}
+\label{eq:distributed_research_roles}
+\end{equation}
+
+where $Q$ denotes question formation, $G$ candidate generation, $E$
+experimental or formal execution, and $V$ validation. The relevant attribution
+question is which participant supplied each causally decisive contribution.
+Hybrid research can therefore produce machine knowledge invention without
+requiring that the machine independently manufacture instruments, finance a
+laboratory, or publish its own result.
+
+This model suggests that the strongest future scientific systems may be
+collaborative rather than substitutive. Machines can search large conceptual
+spaces, preserve extensive derivational records, connect distant literatures,
+and operate continuous experimental loops; humans can contribute normative
+judgment, embodied and social context, critical opposition, and institutional
+accountability. Research on AI-enabled science already emphasizes the growing
+role of such systems across the scientific cycle \cite{wang2023scientific}.
+
+\subsection{\textbf{Epistemic Opacity and the Human Knowledge Gap}}
+
+Knowledge invention introduces a translation problem. A machine may produce a
+valid representation that predicts or controls a phenomenon while remaining
+difficult for humans to understand. If only the machine can operate the new
+representation, the result expands effective capability without necessarily
+expanding human understanding.
+
+We therefore distinguish machine-valid knowledge from human-assimilated
+knowledge:
+
+\begin{equation}
+\begin{aligned}
+\mathcal{K}_{M}^{V}
+&=\{\kappa:V_M(\kappa)=1\},\\
+\mathcal{K}_{H}^{A}
+&=\{\kappa:V_H(\kappa)=1
+\land \operatorname{Understand}_H(\kappa)=1\}.
+\end{aligned}
+\label{eq:machine_human_knowledge_gap}
+\end{equation}
+
+The gap $\mathcal{K}_{M}^{V}\setminus\mathcal{K}_{H}^{A}$ may grow even when
+machine outputs are empirically successful. This does not necessarily negate
+their validity: human science already relies on instruments, numerical
+procedures, and complex models that no individual understands completely. It
+does, however, alter the distribution of epistemic dependence. Future systems
+should therefore be evaluated not only on invention, but also on their capacity
+to generate explanations, abstractions, demonstrations, and experiments that
+permit independent human assimilation.
+
+\subsection{\textbf{Dual Use and Responsible Disclosure}}
+
+A capability that discovers unknown unknowns can produce beneficial knowledge
+and dangerous knowledge through the same underlying process. The risk is not
+limited to erroneous outputs. A contribution may be valid, novel, and
+consequential precisely because it enables a powerful harmful application.
+Work on AI-powered drug discovery has already demonstrated how objectives can
+be redirected toward toxic compounds, illustrating the dual-use character of
+scientific AI \cite{urbina2022dualuse}.
+
+Knowledge invention should therefore pass a governance gate distinct from its
+epistemic validation:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{Release}(\kappa)
+=\Gamma(&V(\kappa),B(\kappa),R(\kappa),
+M(\kappa),G),
+\end{aligned}
+\label{eq:release_governance}
+\end{equation}
+
+where $B$ denotes expected benefit, $R$ foreseeable risk, $M$ available
+mitigation, and $G$ the accountable governance process. Epistemic validity is
+necessary for responsible assessment but does not imply unrestricted release.
+Possible outcomes include open publication, staged access, controlled
+replication, partial disclosure, delayed release, or non-release of operational
+details. Governance should remain proportional and reviewable rather than
+becoming a blanket argument against scientific inquiry.
+
+The principles of human dignity, prevention of harm, transparency,
+accountability, and human oversight articulated in international AI ethics
+guidance provide a normative foundation for this process
+\cite{unesco2021recommendation}. Because inventing systems may identify hazards
+that neither developers nor evaluators anticipated, governance must operate
+throughout the research lifecycle and include mechanisms for escalation when
+new risks emerge.
+
+\subsection{\textbf{Limitations of the Proposed Framework}}
+
+The framework has several unavoidable limitations. First, absence is difficult
+to prove. A contribution judged novel may exist in an obscure publication,
+private laboratory, inaccessible language, proprietary archive, or tacit human
+practice. Frontier verification therefore yields a defeasible conclusion, not
+logical certainty.
+
+Second, causal attribution becomes difficult in systems trained on vast and
+partly undocumented corpora. Semantic novelty does not guarantee computational
+independence from prior human material. Training-data provenance, retrieval
+logs, controlled access, and prospective trials can reduce this uncertainty but
+cannot always eliminate it.
+
+Third, consequentiality is partly historical. A contribution that initially
+appears minor may later reorganize a field, while a celebrated result may have
+little durable effect. The framework therefore permits provisional assessment
+followed by longitudinal revision.
+
+Fourth, the boundary of the recognized research agenda is socially distributed
+and culturally incomplete. Different communities may recognize different
+questions, and underrepresented knowledge traditions may be absent from the
+databases used for novelty review. Evaluation panels must treat database
+coverage as evidence with limitations rather than as a complete representation
+of humanity's knowledge.
+
+Finally, no finite test can certify unrestricted future superintelligence.
+Evaluation can support a bounded claim about a system, configuration, interval,
+and demonstrated set of contexts:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{Claim}_{\mathrm{SI}}
+=\operatorname{SI}(x\mid
+\theta,D,T,\tau,\mathcal{C},\mathcal{V}),
+\end{aligned}
+\label{eq:bounded_si_claim}
+\end{equation}
+
+where $\mathcal{C}$ denotes evaluated contexts and $\mathcal{V}$ the validation
+regime. Changes to the model, accessible tools, data, or operating environment
+require renewed evaluation.
+
+\subsection{\textbf{Research Agenda and the Path to AGI-Former}}
+
+The theory motivates six immediate research directions. First, prospective
+invention trials should evaluate systems against newly arriving data and
+sequestered environments rather than retrospective benchmarks. Second,
+machine-readable provenance standards should record human and machine
+contributions at epistemically meaningful granularity. Third, independent
+institutions should conduct frontier searches, validation, and attribution
+audits. Fourth, evaluation should span scientific, mathematical, engineering,
+and conceptual domains. Fifth, research is needed on translating
+machine-originated structures into human-understandable knowledge. Sixth,
+responsible-disclosure protocols must be adapted to discoveries whose risks
+were not specified before the discovery process began.
+
+These requirements also motivate an architectural question. Integrated
+multimodal agency may supply the perception, memory, reasoning, communication,
+tool use, and action needed for AGI, but knowledge invention additionally
+requires sustained world modeling, cross-domain fusion, autonomous question
+formation, hypothesis competition, experiment design, metacognitive
+supervision, and revision under external evidence. We will address the
+architectural substrate for general intelligence in subsequent work through
+\emph{AGI-Former}. The present paper establishes the conceptual boundary that
+such an architecture would have to cross before its capabilities should be
+called superintelligent.
+
+The resulting research sequence is therefore deliberate: define intelligence
+and consciousness, distinguish functional forms of consciousness, establish
+AGI as integrated multimodal agency, construct an architecture for that agency,
+and then evaluate whether the resulting system can originate validated
+knowledge beyond the human epistemic frontier. Architecture enables the test;
+knowledge invention determines whether the stronger threshold has been crossed.
